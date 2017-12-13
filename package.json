@@ -1,0 +1,27 @@
+{
+  "name": "webserver",
+  "version": "0.1.0",
+  "description": "basic webserver",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dbateman3/node-webserver.git"
+  },
+  "keywords": [
+    "web",
+    "server",
+    "idiot"
+  ],
+  "author": "Dan Bateman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dbateman3/node-webserver/issues"
+  },
+  "homepage": "https://github.com/dbateman3/node-webserver#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
