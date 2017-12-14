@@ -10,9 +10,7 @@ hbs.registerPartials(__dirname + '/views/partials');
 //set express configuration key value pair
 //view dir is default to render express views
 app.set('view engine', 'hbs');
-//middleware, use __dirname to point to this apps location then file
-//for static webpages, help.html
-app.use(express.static(__dirname + '/public'));
+
 //app use registers middleware and takes a function
 // next tells express when your middleware function is done
 app.use(function(req, res, next) {
@@ -27,10 +25,15 @@ app.use(function(req, res, next) {
 	});
 	next();
 });
-
+/* maintenance middleware
 app.use(function(req, res, next) {
 	res.render('maintenance.hbs');
 });
+*/
+//the order you use middleware is important
+//middleware, use __dirname to point to this apps location then file
+//for static webpages, help.html
+app.use(express.static(__dirname + '/public'));
 
 //helper function
 hbs.registerHelper('getCurrentYear', function() {
